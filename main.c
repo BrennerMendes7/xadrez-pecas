@@ -2,13 +2,14 @@
 
 int main() {
     
-    int torre, bispo, rainha;
+    int torre, bispo, rainha, cavalo;
     int opcao;
     printf("--- MENU PRINCIPAL ---\n\n");
     printf("1 - Torre\n");
     printf("2 - Bispo\n");
     printf("3 - Rainha\n");
-    printf("4 - Sair do Jogo\n");
+    printf("4 - Cavalo\n");
+    printf("5 - Sair do Jogo\n");
     printf("Digite a peça que deseja mover: ");
     scanf("%d", &opcao);
 
@@ -44,6 +45,19 @@ int main() {
           break;
 
         case 4:
+          int movimento = 1;
+
+          while(movimento--) {
+            for (cavalo = 0; cavalo < 2; cavalo++) {
+                printf("Baixo\n");
+            }
+            printf("Esquerda\n");
+          }
+
+          printf("O cavalo completou o movimento em L\n");
+          break;
+
+        case 5:
           printf("Saindo do jogo !\n");
           break;
 
@@ -51,5 +65,7 @@ int main() {
           printf("Opção inválida !\n");
           
     }
+
+    return 0;
 
 }
